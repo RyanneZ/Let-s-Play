@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+    <title>LET'S PLAY</title>
+</head>
+<body>
+    <nav class="nav-wraper indigo">
+        <div class="container">
+            <a href="/" class="brand-logo">LET'S PLAY</a>
+            <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/">Home</a></li>
+                <li><a href="/posts">Posts</a></li>
+                <li><a href="#">Profile</a></li>
+                <li>
+                    <% if (user) { %>
+                      <a href="/logout">Log Out</a>
+                    <% } else { %>
+                      <a href="/auth/google">Login with Google</a>
+                    <% } %>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <ul class="sidenav" id="mobile-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Posts</a></li>
+        <li><a href="#">Profile</a></li>
+        <li>
+            <% if (user) { %>
+              <a href="/logout">Log Out</a>
+            <% } else { %>
+              <a href="/auth/google">Login with Google</a>
+            <% } %>
+        </li>
+    </ul>

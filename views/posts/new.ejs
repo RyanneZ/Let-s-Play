@@ -1,0 +1,58 @@
+<%- include('../partials/header') %>
+<br>
+<br>
+<div class="container">
+    <h4 class="indigo-text">Create a new post</h4>
+
+    <form id="new-post" action="/posts" method="POST">
+        <div class="input-field">
+            <i class="material-icons prefix indigo-text text-lighten-2">title</i>
+            <input type="text" name="title" id="title">
+            <label for="title">Title</label>
+        </div>
+
+        <div class="input-field">
+            <i class="material-icons prefix indigo-text text-lighten-2">description</i>
+            <input type="text" name="description" id="description">
+            <label for="description">Description</label>
+        </div>
+        
+        <div class="input-field">
+            <i class="material-icons prefix indigo-text text-lighten-2">add_a_photo</i>
+            <input type="text" name="photo_url" id="photo_url">
+            <label for="photo_url">Photo</label>
+        </div>
+    
+        <div class="input-field">
+            <i class="material-icons prefix indigo-text text-lighten-2">fitness_center</i>
+            <select name="sport" id="sport">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="Tennis">Tennis</option>
+                <option value="Basketball">Basketball</option>
+                <option value="Badminton">Badminton</option>
+                <option value="Soccer">Soccer</option>
+                <option value="Other">Other</option>
+            </select>
+            <label for="sport">Sport</label>
+        </div>
+
+        <div class="input-field">
+            <i class="material-icons prefix indigo-text text-lighten-2">date_range</i>
+            <input type="date" name="time" id="time" class="datepicker">
+            <label for="time">Time</label>
+        </div>
+
+
+        <div class="input-field">
+            <i class="material-icons prefix indigo-text text-lighten-2">add_location</i>
+            <input type="text" name="location" id="location">
+            <label for="location">Location</label>
+        </div>
+        
+        <input type="submit" value="Submit" class="btn indigo">
+    </form>
+</div>
+
+
+
+<%- include('../partials/footer') %>

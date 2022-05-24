@@ -1,0 +1,88 @@
+<%- include('../partials/header') %>
+
+<br>
+<br>
+
+<div class="row">
+    <div class="col s6 offset-s3">
+        <h6 class="indigo-text">Created by: <%= post.user.username %></h6>
+    </div>
+   
+</div>
+
+<div class="row">
+    <div class="col s6 offset-s3">
+      <div class="card" style="padding: 20px;">
+        <div class="card-image">
+            <img class="responsive-img" src='<%= post.photo_url %>'>
+        </div>
+        <div class="indigo-text"><h4><%= post.title %></h4></div>
+        <br>
+        <h6><%= post.description %></h6>
+        <br>
+        <div><h6>Sport: <%= post.sport%></h6> </div>
+        <div><h6>Time: <%= post.time%></h6></div>
+        <div><h6>Location: <%= post.location%></h6></div>  
+        <a href="/posts/<%= post._id%>/edit" class="btn indigo waves-effect waves-light">Edit</a>
+        <br><br>
+        <form action="/posts/<%= post._id%>?_method=DELETE" method="POST" style="display:incline">
+            <button class="btn indigo waves-effect waves-light">Delete</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col s6 offset-s3">
+        <div class="card">
+            <div class="card-content">
+                <h6 class="indigo-text">Comments:</h6>
+                <br>    
+                <% if (post.comments.length) { %>
+                    <% post.comments.forEach(function(c) { %>
+                    <div>
+                        <div>Availability: <%= c.availability %></div>
+                        <div>Skill level: <%= c.skill %></div>
+                        <div>Comment: <%= c.content %></div>
+                        <br>
+                        <br>
+                    </div>
+            
+                    <% }); %>
+                <% } %>
+                
+            </div>
+
+        </div>
+     
+      
+    </div>   
+    <div class="col s8 offset-s2">
+        <div class="container" >
+            <br><br>
+            <h5 class='indigo-text'>Add a Comment</h5>
+            <form id="add-conment-form" method="POST" action="/posts/<%= post._id %>/comments">
+            <label>Availability:</label>
+            <select name="availability">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <br>
+            <label>Skill level:</label>
+            <select name="skill">
+                <option value="Beginner">Beginner</option>
+                <option value="Medium">Medium</option>
+                <option value="Advanced">Advanced</option>
+                <option value="Pro">Pro</option>
+            </select>
+            <br>
+            <label >Comments:</label>
+            <textarea name="content"></textarea>
+            <input type="submit" value="Add Comment" class="btn indigo ">
+           
+            </form>
+        
+        </div>
+    </div>
+</div>        
+
+
+<%- include('../partials/footer') %>

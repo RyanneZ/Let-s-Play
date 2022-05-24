@@ -1,0 +1,112 @@
+<%- include('./partials/header') %>
+<br>
+<br>
+
+
+
+<div class="row">
+  <div class="col m12 s12"> 
+    <div class="center">
+      <img class='responsive-img' id='landing-img' src='https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41574-021-00486-1/MediaObjects/41574_2021_486_Figa_HTML.jpg' alt="">
+    </div>
+  </div>
+</div>
+<br><br>
+<div class="row">
+  <div class="col m12 s12 " style="height: 200px; background:light grey">
+  
+      <h3 class=" indigo-text center-align">Having trouble finding someone to play a game with?<br></h3>
+      <h5 class="  center-align">We are here to help. LET’S PLAY is a platform to help people find other people to play sports with. <br></h5>
+      <h5 class=" indigo-text center-align"><br><br></h5>
+    
+  </div>
+</div>
+
+<div class="row" style="display:flex;">
+  <div class="col m6 s12 " > 
+    <img style="width: 100%;" src="https://media.istockphoto.com/vectors/active-children-playing-soccer-outdoors-vector-id1263319132?k=20&m=1263319132&s=612x612&w=0&h=7Fe-SJPorxPuQh8l3M77nqBffo09GOx9OoopfRLK-LM=" alt="">
+  </div>  
+ 
+
+  <div class="col m6 s12" style="flex-wrap: wrap;"> 
+    <div class="card">
+      <div class="card-content">
+        <br>
+        <h5 class='indigo-text'>Simply post your request on our community board.</h5><br>
+        <h6>To be more specific, we encourage you to tell people based on 
+          these aspects: <br><br></h6>
+        
+        Sport: eg: tennis <br>
+        Time: eg: 3 pm on May 16th <br>
+        Location: eg: bayview village tennis club <br>
+
+      </div>
+    </div>
+  </div>  
+</div>  
+
+<div class="row">
+  <div class="col s12">
+    <h5 class='indigo-text center-align'>Are you excited to make your own post</h5>
+    <div id="new-post" class="center-align">
+      <a href="/posts/new"><button class="btn indigo waves-effect waves-light">Create a new post</button></a>
+    </div>
+  </div>
+</div>
+
+
+<div class="row" style="display:flex;">
+  <div class="col m4 s12 ">
+    <h5 class='indigo-text'>Ready to play some outdoor sports? </h5>
+    <button id="weather" class="btn indigo waves-effect waves-light">Check the weather</button> 
+    <div class="card" >
+      <div id="weather-container" class="card-content">
+        <div class="card-title"><h4>Weather</h4></div>
+          <h5><span id="span1"></span></h5>
+        <div >
+          <img id="weather-icon" src="http://openweathermap.org/img/wn/10d@4x.png" alt="">
+        </div>
+        <p class="card-text">High Temp : <span id="span2"></span></p>
+        <p class="card-text">Low Temp : <span id="span3"></span></p>
+        <p class="card-text">Pressure: <span id="span4"></span></p>
+        <p class="card-text">Humidty: <span id="span5"></span></p>
+      </div>
+    
+    </div>
+
+  </div>
+  <div class="col m8 s12 ">
+    <img style="width: 100%;" src="https://img.freepik.com/free-vector/kids-learning-play-soccer-with-balls-field-summer-camp-tiny-people-soccer-camp-football-academy-kids-soccer-school-concept-pinkish-coral-bluevector-isolated-illustration_335657-1480.jpg?w=2000" alt="">
+  </div>
+  
+</div>
+
+
+<script>
+
+  const btn1 = document.getElementById('weather')
+  btn1.addEventListener('click', weather)
+
+  async function weather() {
+    let weather = await fetch('https://api.openweathermap.org/data/2.5/weather?q=Toronto,ca&units=metric&APPID=e31dbdb16b3b4e124c2f42205ee5d516')
+    let obj = await weather.json()
+ 
+    $("#span1").html(obj.weather[0].main)
+    $("#weather-icon").attr("src", `http://openweathermap.org/img/wn/${obj.weather[0].icon}@4x.png`);
+    $("#span2").html(`${obj.main.temp_max}&deg;C`)
+    $("#span3").html(`${obj.main.temp_min}&deg;C`)
+    $("#span4").html(`${obj.main.pressure}mb`)
+    $("#span5").html(`${obj.main.humidity}%`)
+  
+
+
+
+
+    $("#weather-container").show()
+
+
+
+  }
+</script>
+<%- include('./partials/footer') %>
+

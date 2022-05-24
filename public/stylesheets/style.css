@@ -1,0 +1,46 @@
+/* body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.right {
+  background-color: aquamarine;
+  width: 300px;
+  height: 300px;
+} */
+
+.homepage {
+  /* background-image: url(https://riseapps.co/wp-content/uploads/2020/10/img_Digital-strategies-to-boost-your-fitness-chain-in-pandemic-times.png); */
+
+  /* background-size: cover; */
+  /* background-position: center;
+  min-height: 700px;
+  min-width: 400px;  */
+}
+/* #landing-img {
+  margin: 20px;
+  width: 100%;
+} */
+
+.responsive-img {
+  /* width: 200px;
+  height: 200px; */
+
+}
+
+.main {
+  width:50%
+}
+.comment {
+  width:50%;
+  
+}
+
+#weather-container {
+  display: none;
+}
+
