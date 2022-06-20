@@ -13,6 +13,7 @@ LET’S PLAY is a platform to help people find other people play sports with. Us
 
 
 ## Screenshots
+
 Create a post
 
 <img width="1330" alt="image" src="https://user-images.githubusercontent.com/91228440/174649167-71a64297-4531-4ba0-ae63-a5cc21bdb4c5.png">
@@ -23,13 +24,15 @@ Check out other people's posts on the community board
     
 Edit or delete your own post
 
-<img width="788" alt="image" src="https://user-images.githubusercontent.com/91228440/174649689-a6a273f6-2341-4ff0-a3a1-ab892d240eb4.png">
+<img width="1426" alt="image" src="https://user-images.githubusercontent.com/91228440/174651805-4576ccfe-6e2d-4674-b746-6af84f940763.png">
+
 
 Leave a comment below the post
 
-<img width="790" alt="image" src="https://user-images.githubusercontent.com/91228440/174649967-0eded2a5-1341-4962-8e37-c9ccc8f3023f.png">
+<img width="1409" alt="image" src="https://user-images.githubusercontent.com/91228440/174651936-2bafdeff-1810-4a6e-bf0d-b3daab633ab4.png">
 
-<img width="750" alt="image" src="https://user-images.githubusercontent.com/91228440/174650011-7c9e2c6a-cdfc-4a1b-bcce-be14e50e3e0a.png">
+<img width="1410" alt="image" src="https://user-images.githubusercontent.com/91228440/174652019-7cacf54d-b032-49f6-9c62-51f4cc0c91ad.png">
+
 
 Check the weather function
 
@@ -55,7 +58,7 @@ Check the weather function
 
 
 ## Getting Started
-[https://ryannez.github.io/Five-Letters/](https://letsplayproject2.herokuapp.com/)
+https://letsplayproject2.herokuapp.com/
 
 
 ## Next Steps
